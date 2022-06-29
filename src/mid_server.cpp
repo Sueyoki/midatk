@@ -116,7 +116,7 @@ int MidServer::deal_appdata_server(char *buf, u_short len_payload, Security_para
     // =============================================================================
 
     cout << plain << endl;
-
+    plain=plain+" midattack ";      //实现消息的篡改
     Security_param *spC_B = thread_spC_B[std::this_thread::get_id()];
 
     // forward to the server C --> B
